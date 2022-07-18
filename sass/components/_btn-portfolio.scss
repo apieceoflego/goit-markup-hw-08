@@ -1,10 +1,18 @@
 .button-nav {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+  justify-content: left;
 
-  & .button-nav__list + .button-nav__list {
-    margin-left: 8px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+    margin-bottom: 50px;
   }
 }
 
@@ -35,3 +43,25 @@
       0px 2px 2px rgba(0, 0, 0, 0.12);
   }
 }
+
+// .button-nav {
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 10px;
+//   margin-bottom: 50px;
+//   justify-content: left;
+
+//   // & .button-nav__list + .button-nav__list {
+//   //   margin-left: 8px;
+//   // }
+// }
+
+// .button-nav__list {
+//   @media screen and (min-width: 768px) {
+//     width: 73px;
+//   }
+
+//   @media screen and (min-width: 1200px) {
+//     width: 73px;
+//   }
+// }

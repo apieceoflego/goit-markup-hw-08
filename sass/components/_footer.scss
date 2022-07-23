@@ -30,6 +30,7 @@
   @media screen and (min-width: 1200px) {
     margin-right: 70px;
     margin-bottom: 0px;
+    margin-left: 0px;
   }
 }
 .footer-contact__list {
@@ -150,6 +151,7 @@
 
   @media screen and (min-width: 1200px) {
     display: inline-block;
+    margin-left: 0px;
   }
 }
 .footer-mailing__title {
@@ -169,6 +171,7 @@
   }
 
   @media screen and (min-width: 1200px) {
+    margin-bottom: 20px;
     margin-top: 12px;
   }
 }
@@ -186,7 +189,7 @@
 
   @media screen and (min-width: 1200px) {
     display: flex;
-    flex-wrap: nowrap;
+    flex-direction: row;
     gap: 0px;
   }
 }

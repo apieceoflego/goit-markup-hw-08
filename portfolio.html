@@ -36,17 +36,52 @@
       <ul class="contact-nav list">
         <li class="contact-nav__item">
           <a class="contact-nav__link" lang="en" href="mailto:info@devstudio.com">
-            <svg class="contact-nav__icon" width="16px" height="12px">
+            <svg class="contact-nav__icon-mail" width="16px" height="12px">
               <use href="./images/SVG/icons.svg#envelope"></use>
             </svg>info@devstudio.com</a>
         </li>
         <li class="contact-nav-item">
           <a class="contact-nav__link" href="tel:+380961111111">
-            <svg class="contact-nav__icon" width="10px" height="16px">
+            <svg class="contact-nav__icon-tel" width="10px" height="16px">
               <use href="./images/SVG/icons.svg#smartphon"></use>
             </svg>+38 096 111 11 11</a>
         </li>
       </ul>
+
+      <button class="mobile-menu-btn" data-menu-button>
+        <svg class="mobile-menu-icon" width="24" height="16">
+          <use class="mobile-menu-burger" href="./images/SVG/icons.svg#burger"></use>
+          <use class="mobile-menu-close" href="./images/SVG/icons.svg#mobile-close"></use>
+        </svg>
+      </button>
+
+      <!-- Mobile menu -->
+      <div class="mobile-menu" data-menu>
+        <ul class="mobile-menu-nav list">
+          <li class="mobile-menu-nav-item"><a class="mobile-menu-nav-link link" href="./index.html">Студия</a>
+          </li>
+          <li class="mobile-menu-nav-item"><a class="mobile-menu-nav-link link current"
+              href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="mobile-menu-nav-item"><a class="mobile-menu-nav-link link" href="">Контакты</a></li>
+        </ul>
+
+        <ul class="mobile-menu-con list">
+          <li class="mobile-menu-con-item"><a class="mobile-menu-con-link link color" href="tel:+380961111111">+38 096
+              111
+              11
+              11</a></li>
+          <li class="mobile-menu-con-item"><a class="mobile-menu-con-link link"
+              href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+        </ul>
+
+        <ul class="mobile-menu-social list">
+          <li class="mobile-menu-social-item"><a class="mobile-menu-social-link link" href="">Instagram</a></li>
+          <li class="mobile-menu-social-item"><a class="mobile-menu-social-link link" href="">Twitter</a></li>
+          <li class="mobile-menu-social-item"><a class="mobile-menu-social-link link" href="">Facebook</a></li>
+          <li class="mobile-menu-social-item"><a class="mobile-menu-social-link link" href="">LinkedIn</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -71,7 +106,34 @@
         <ul class="portfolio list">
           <li class="portfolio__list">
             <div class="portfolio__thumb">
-              <img class="portfolio__foto" src="./images/portfolio/img.jpg" alt="Ноутбук" width="370" />
+              <picture>
+                <!-- DESK -->
+                <source media="(min-width: 1200px)"
+                  srcset="./images/portfolio/portfolio1-Desk.webp 1x, ./images/portfolio/portfolio1-Desk@2x.webp 2x"
+                  type="image/webp" />
+                <source media="(min-width: 1200px)"
+                  srcset="./images/portfolio/portfolio1-Desk.jpg 1x, ./images/portfolio/portfolio1-Desk@2x.jpg 2x"
+                  type="image/jpg" />
+
+                <!-- Tab -->
+                <source media="(min-width: 768px)"
+                  srcset="./images/portfolio/portfolio1-Tab.webp 1x, ./images/portfolio/portfolio1-Tab@2x.webp 2x"
+                  type="image/webp" />
+                <source media="(min-width: 1200px)"
+                  srcset="./images/portfolio/portfolio1-Tab.jpg 1x, ./images/portfolio/portfolio1-Tab@2x.jpg 2x"
+                  type="image/jpg" />
+
+                <!-- Mobile -->
+                <source media="(max-width: 767px)"
+                  srcset="./images/portfolio/portfolio1-Mob.webp 1x, ./images/portfolio/portfolio1-Mob@2x.webp 2x"
+                  type="image/webp" />
+                <source media="(min-width: 1200px)"
+                  srcset="./images/portfolio/portfolio1-Mob.jpg 1x, ./images/portfolio/portfolio1-Mob@2x.jpg 2x"
+                  type="image/jpg" />
+
+                <img class="portfolio__foto" src="./images/portfolio/portfolio1-Desk.jpg" alt="Ноутбук" width="370" />
+              </picture>
+
               <h2 class="portfolio__title">Ресурс предлагает комплексные предложения с разным уровнем функционала и
                 сервисов. Все это позволит посетителю получить
                 исчерпывающие сведения о компании или частном лице.</h2>
@@ -199,13 +261,13 @@
     </section>
   </main>
 
-  <!-- <footer class="footer list">
+  <footer class="footer list">
     <div class="container">
       <div class="footer-block">
         <div class="footer-contact">
           <a class="logo logo--position" lang="en" href="./index.html"><span class="logo-text">Web</span>Studio</a>
           <address>
-            <ul class="list">
+            <ul class="footer-contact__list list">
               <li class="footer-contact__item">
                 <p class="footer-contact__text">г. Киев, пр-т Леси Украинки, 26</p>
               </li>
@@ -213,7 +275,8 @@
               <li class="footer-contact__item">
                 <a class="footer-contact__link" lang="en" href="mailto:info@devstudio.com">info@devstudio.com</a>
               </li>
-              <li><a class="footer-contact__link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+              <li class="footer-contact__item"><a class="footer-contact__link" href="tel:+380961111111">+38 096 111 11
+                  11</a></li>
             </ul>
           </address>
         </div>
@@ -263,7 +326,9 @@
         </div>
       </div>
     </div>
-  </footer> -->
+  </footer>
+
+  <script src="./js/menu.js"></script>
 </body>
 
 </html>

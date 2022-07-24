@@ -6,6 +6,7 @@
 
   display: flex;
   flex-direction: column;
+  z-index: 100;
 
   width: 100vw;
   height: 100vh;
@@ -49,14 +50,19 @@
   color: var(--text-color);
   font-weight: 500;
   font-size: 24px;
-  line-height: 28px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
 }
 
 .color {
   color: var(--accent-color);
-  font-size: 34px;
-  line-height: 40px;
+  font-size: 26px;
+  line-height: 1.17;
+
+  @media screen and (min-width: 480px) {
+    font-size: 34px;
+    line-height: 1.17;
+  }
 }
 
 .mobile-menu-social {
